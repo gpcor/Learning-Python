@@ -9,4 +9,5 @@ I will be uploading my code here as I create small projects and learn things of 
 
 At some point I want to be able to come back to this code and refactor, altering it so it becomes more efficient and uses better Pythonic code.
 
-### And away we go...
+### Programming Daily Log:
+* March 31st, 2020: Spent some time today after work doing some typing practice. Then did sections one thru three of Automate the boring stuff Udemy course (Basics, Flow Control, and Functions). 

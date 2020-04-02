@@ -12,9 +12,8 @@ print('You get 5 guesses, use them wisely!')
 def guessingGame():
     for i in range(5):
         print('Take a guess!')
-        userGuess = int(input())
-        # TODO nested try/except statements to handle invalid inputs and keyboard interrupts
         try:
+            userGuess = int(input())
             if userGuess > secretNumber:
                 print('That number is to high!')
 
@@ -24,6 +23,8 @@ def guessingGame():
             elif userGuess == secretNumber:
                 print('That is the number!')
                 break
+        except KeyboardInterrupt:
+            print('At least finsish the game, jeez...')
         except:
             if userGuess != int:
                 print('That is not a valid number...')

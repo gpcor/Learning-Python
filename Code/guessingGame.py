@@ -12,33 +12,41 @@ print('You get 5 guesses, use them wisely!')
 def guessingGame():
     for i in range(5):
         print('Take a guess!')
-        userGuess = input()
+        userGuess = int(input())
+        # TODO nested try/except statements to handle invalid inputs and keyboard interrupts
         try:
-            if int(userGuess) > secretNumber:
+            if userGuess > secretNumber:
                 print('That number is to high!')
 
-            elif int(userGuess) < secretNumber:
+            elif userGuess < secretNumber:
                 print('That number is too low!')
 
-            elif int(userGuess) == secretNumber:
+            elif userGuess == secretNumber:
                 print('That is the number!')
                 break
         except:
             if userGuess != int:
                 print('That is not a valid number...')
     else:
-        print('You have ran out of guesses, better luck next time')
+        print(
+            f'You have ran out of guesses! The number I was thinking of was {secretNumber}')
 
 
 guessingGame()
 
+print(f'Thanks for playing {name}! Would you like to play again?')
+
 while True:
-    print(f'Thanks for playing {name}! Would you like to play again?')
-    userAnswer = input()
+    try:
+        userAnswer = str.lower(input())
+        if userAnswer == 'yes':
+            guessingGame()
 
-    if userAnswer.lower() == 'yes':
-        guessingGame()
-
-    else:
-        print(f'Bye {name}!')
+        elif userAnswer != 'yes' and userAnswer != 'no':
+            print('It\'s a simple yes or no really. Do you want to play again?')
+        else:
+            print(f'Bye {name}!')
+            sys.exit()
+    except KeyboardInterrupt:
+        print('So rude and abrupt...')
         sys.exit()

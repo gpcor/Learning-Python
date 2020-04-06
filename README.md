@@ -14,4 +14,10 @@ At some point I want to be able to come back to this code and refactor, altering
 
 * April 1st, 2020: Did some additional typing practice today by spending the entire day making sure I utilized the new typing method. In Python I used the Automate Everything lessons and learned about Try/Except to handle certain explicit errors. I also wrote a complete program (guess the number game) and started working on Lists.
 
-* April 2nd, 2020: I worked more on Lists today and their differen methods and also discovered random.shuffle() by accident. I watched a couple videos about code practices and reviewed a version of my guessing game done by SinfulPhantom, but done in a much more software engineer kind of way (OOP style). It was beautiful and a clear reminder tha I have a long way to go but I know where I want to end up.
+* April 2nd, 2020: I worked more on Lists today and their differen methods and also discovered random.shuffle() by accident. I watched a couple videos about code practices and reviewed a version of my guessing game done by SinfulPhantom, but done in a much more software engineer kind of way (OOP style). It was beautiful and a clear reminder that I have a long way to go but I know where I want to end up.
+
+* April 3rd, 2020: Not much more today. Did some more with Lists and practiced more clean coding techniques. Discovered that Evernote has a Python API. I'd like to make an application that creates a shopping list based on input with item/qty pairs. Once complete, I'd like to be able to push the list to Evernote. Idea is WIP and requires a little more knowledge I think.
+
+* Did not program on 4 April or 5 April, spent the weekend with my wife relaxing and enjoying the nice weather in our backyard during this pandemic. Still hoping to come out of the COVID-19 crisis with more knowledge and programming ability than when it started.
+
+* April 6th, 2020: Finished Lists and started on Dictionaries and Data Structures in my Automate the Boring Stuff Course. I think dictonaries are the way to go for the evernote app. The Key/Value pairs line up nicely with the Item/Qty pairs I mentioned earlier. On the 9th I can start playing video games but I have to make sure it doesn't hinder my programming progress. I need to create a system that makes this easier.

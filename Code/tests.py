@@ -1,12 +1,10 @@
-import random
+import pprint
 
-stringA = 'AJKMLNFDBKSTRUBJQAZWSQWERTYUIOPFUNASDFGHJKLXLKHJGFDSANUFPOIUYTREWQSWZAQJBURTSKBDFNLMKJA'
-stringB = reversed(stringA)
+message = 'It was a bright cold day in april, and the clocks were stricking thirteen.'
+count = {}
 
-print(type(stringB))
-print(stringB)
+for character in message.upper():
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
 
-if stringB == stringA:
-    print('This is a palindrome')
-else:
-    print('This is not a palindrome')
+pprint.pprint(count)

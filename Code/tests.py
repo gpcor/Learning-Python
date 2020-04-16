@@ -1,10 +1,7 @@
-import pprint
+import re
 
-message = 'It was a bright cold day in april, and the clocks were stricking thirteen.'
-count = {}
+file1 = open("Learning-Python/Code/resume.txt","r")
+phoneRegex = re.compile(r'\(\d\d\d\) \d\d\d-\d\d\d\d')
 
-for character in message.upper():
-    count.setdefault(character, 0)
-    count[character] = count[character] + 1
-
-pprint.pprint(count)
+mo = phoneRegex.search(file1)
+print(mo.group())

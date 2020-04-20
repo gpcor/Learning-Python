@@ -1,7 +1,7 @@
 import re
 
-file1 = open("Learning-Python/Code/resume.txt","r")
-phoneRegex = re.compile(r'\(\d\d\d\) \d\d\d-\d\d\d\d')
+prime = 'Serve the public trust.\nProtect the innocent.\nUpload the law.'
+dotStar = re.compile(r'.*', re.DOTALL)
+mo = dotStar.search(prime)
 
-mo = phoneRegex.search(file1)
-print(mo.group())
+print(mo) 

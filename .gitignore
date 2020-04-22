@@ -1,3 +1,5 @@
-venv
-__pycache__
-.vscode
+.DS_Store
+/Code/__pycache__
+Code/venv/pyvenv.cfg
+Code/venv/bin/
+Code/venv/lib/

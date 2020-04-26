@@ -9,5 +9,4 @@ for folderName, subFolders, fileNames in os.walk('/Users/gcorsini/Desktop/Delici
         if file.endswith('.txt'):
             print(f'Removing {file} in {folderName}')
             file = folderName + '/' + file
-            print(file)
             os.unlink(file)

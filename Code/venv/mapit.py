@@ -1,10 +1,19 @@
-import webbrowser, sys, pyperclip
+import webbrowser
+import sys
 
 sys.argv
 
-if len(sys.argv) > 1:
-    address = ' '.join(sys.argv[1:])
-else: 
-    address = pyperclip.paste()
 
-webbrowser.open(f'https://www.google.com/maps/place/{address}')
+def commandDirections():
+
+    if len(sys.argv) > 1:
+        commandInput = ' '.join(sys.argv[1:])
+
+    addresses = commandInput.split(',')
+    startPoint = addresses[0]
+    endPoint = addresses[1]
+
+    webbrowser.open(f'https://www.google.com/maps/dir/{startPoint}/{endPoint}')
+
+
+commandDirections()

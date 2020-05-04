@@ -16,4 +16,5 @@ def commandDirections():
     webbrowser.open(f'https://www.google.com/maps/dir/{startPoint}/{endPoint}')
 
 
-commandDirections()
+if __name__ == "__main__":
+    commandDirections()

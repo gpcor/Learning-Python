@@ -33,4 +33,5 @@ def madLibAsker():
            secondNoun, firstVerb, secondVerb, anActivity, songSuggestion, aHelpfulItem, yourName)
 
 
-madLibAsker()
+if __name__ == "__main__":
+    madLibAsker()

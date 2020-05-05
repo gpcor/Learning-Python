@@ -5,3 +5,4 @@ Code/venv/bin/
 .vscode
 .gitignore
 Code/venv/lib/
+geckodriver.log

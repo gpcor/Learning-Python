@@ -6,3 +6,4 @@ Code/venv/bin/
 .gitignore
 Code/venv/lib/
 geckodriver.log
+scraper.txt

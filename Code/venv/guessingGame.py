@@ -1,53 +1,72 @@
 import random
 import sys
-
-print('Hello, what is your name?')
-name = input()
-
-secretNumber = random.randint(1, 20)
-print(f'Well {name}, I am thinking of a number between 1 and 20. Can you guess it?')
-print('You get 5 guesses, use them wisely!')
+from time import sleep
 
 
-def guessingGame():
-    for i in range(5):
-        print('Take a guess!')
-        try:
-            userGuess = int(input())
-            if userGuess > secretNumber:
-                print('That number is to high!')
+class GuessingGame:
 
-            elif userGuess < secretNumber:
-                print('That number is too low!')
+    name = ''
+    guessCount = 0
+    userGuess = ''
+    userAnswer = ''
 
-            elif userGuess == secretNumber:
-                print('That is the number!')
-                break
-        except KeyboardInterrupt:
-            print('At least finsish the game, jeez...')
-        except:
-            if userGuess != int:
-                print('That is not a valid number...')
-    else:
-        print(
-            f'You have ran out of guesses! The number I was thinking of was {secretNumber}')
+    def __init__(self):
 
+        self.name = input('Hello, what is your name? ')
+        print('Well {}, I am thinking of a number between 1 and 20. Can you guess it?'.format(
+            self.name))
+        print('You get 5 guesses, use them wisely!')
+        sleep(2)
 
-guessingGame()
+    def guessingGame(self):
+        secretNumber = random.randint(1, 20)
+        for self.guessCount in range(5):
+            print('Take a guess!')
+            try:
+                self.userGuess = int(input())
+                if self.userGuess > secretNumber:
+                    print('That number is to high!')
 
-print(f'Thanks for playing {name}! Would you like to play again?')
+                elif self.userGuess < secretNumber:
+                    print('That number is too low!')
 
-while True:
-    try:
-        userAnswer = str.lower(input())
-        if userAnswer == 'yes':
-            guessingGame()
-
-        elif userAnswer != 'yes' and userAnswer != 'no':
-            print('It\'s a simple yes or no really. Do you want to play again?')
+                elif self.userGuess == secretNumber:
+                    print('That is the number!')
+                    sleep(2)
+                    break
+            except KeyboardInterrupt:
+                print('At least finsish the game, jeez...')
+            except:
+                if self.userGuess != int:
+                    print('That is not a valid number...')
         else:
-            print(f'Bye {name}!')
-            sys.exit()
-    except KeyboardInterrupt:
-        print('So rude and abrupt...')
-        sys.exit()
+            print('You have ran out of guesses! The number I was thinking of was {}'.format(
+                secretNumber))
+            sleep(2)
+
+    def newGameOrNah(self):
+        print('Thanks for playing {}! Would you like to play again?'.format(self.name))
+        while True:
+            try:
+                self.userAnswer = str.lower(input())
+                if self.userAnswer == 'yes':
+                    return self.userAnswer
+
+                elif self.userAnswer != 'yes' and self.userAnswer != 'no':
+                    print('It\'s a simple yes or no really. Do you want to play again?')
+                else:
+                    print('Bye {}!'.format(self.name))
+                    sys.exit()
+            except KeyboardInterrupt:
+                print('So rude and abrupt...')
+                sys.exit()
+
+
+if __name__ == '__main__':
+    game = GuessingGame()
+    game.guessingGame()
+    game.newGameOrNah()
+    while True:
+        if game.userAnswer.lower() == 'yes':
+            game.guessingGame()
+            game.newGameOrNah()

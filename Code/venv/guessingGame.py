@@ -67,6 +67,6 @@ if __name__ == '__main__':
     game.guessingGame()
     game.newGameOrNah()
     while True:
-        if game.userAnswer.lower() == 'yes':
+        if game.userAnswer == 'yes':
             game.guessingGame()
             game.newGameOrNah()

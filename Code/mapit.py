@@ -1,11 +1,10 @@
-import webbrowser
 import sys
+import webbrowser
 
 sys.argv
 
 
 def commandDirections():
-
     if len(sys.argv) > 1:
         commandInput = ' '.join(sys.argv[1:])
 

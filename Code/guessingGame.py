@@ -4,7 +4,6 @@ from time import sleep
 
 
 class GuessingGame:
-
     name = ''
     guessCount = 0
     userGuess = ''

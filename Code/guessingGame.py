@@ -5,9 +5,9 @@ from time import sleep
 
 class GuessingGame:
     name = ''
-    guessCount = 0
-    userGuess = ''
-    userAnswer = ''
+    guess_count = 0
+    user_guess = ''
+    user_answer = ''
 
     def __init__(self):
 
@@ -17,42 +17,44 @@ class GuessingGame:
         print('You get 5 guesses, use them wisely!')
         sleep(2)
 
-    def guessingGame(self):
-        secretNumber = random.randint(1, 20)
-        for self.guessCount in range(5):
+    def guessing_game(self):
+        secret_number = random.randint(1, 20)
+        for self.guess_count in range(5):
             print('Take a guess!')
             try:
-                self.userGuess = int(input())
-                if self.userGuess > secretNumber:
+                self.user_guess = int(input())
+                if self.user_guess > secret_number:
                     print('That number is to high!')
 
-                elif self.userGuess < secretNumber:
+                elif self.user_guess < secret_number:
                     print('That number is too low!')
 
-                elif self.userGuess == secretNumber:
+                elif self.user_guess == secret_number:
                     print('That is the number!')
                     sleep(2)
                     break
+                elif self.user_guess != int:
+                    print('That is not a valid number...')
             except KeyboardInterrupt:
                 print('At least finsish the game, jeez...')
-            except:
-                if self.userGuess != int:
-                    print('That is not a valid number...')
+
         else:
             print('You have ran out of guesses! The number I was thinking of was {}'.format(
-                secretNumber))
+                secret_number))
             sleep(2)
 
-    def newGameOrNah(self):
+    def new_game_or_nah(self):
         print('Thanks for playing {}! Would you like to play again?'.format(self.name))
         while True:
             try:
-                self.userAnswer = str.lower(input())
-                if self.userAnswer == 'yes':
-                    return self.userAnswer
+                self.user_answer = str.lower(input())
 
-                elif self.userAnswer != 'yes' and self.userAnswer != 'no':
+                if self.user_answer != 'yes' and self.user_answer != 'no':
                     print('It\'s a simple yes or no really. Do you want to play again?')
+
+                elif self.user_answer == 'yes':
+                    return self.user_answer
+
                 else:
                     print('Bye {}!'.format(self.name))
                     sys.exit()
@@ -63,9 +65,9 @@ class GuessingGame:
 
 if __name__ == '__main__':
     game = GuessingGame()
-    game.guessingGame()
-    game.newGameOrNah()
+    game.guessing_game()
+    game.new_game_or_nah()
     while True:
-        if game.userAnswer == 'yes':
-            game.guessingGame()
-            game.newGameOrNah()
+        if game.user_answer == 'yes':
+            game.guessing_game()
+            game.new_game_or_nah()

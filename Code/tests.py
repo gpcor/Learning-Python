@@ -1,17 +1,9 @@
-import openpyxl
+import json
+import pprint
+from urllib.request import urlopen
 
-wb = openpyxl.load_workbook('automate_online-materials/example.xlsx')
-sheet = wb.active
-print(sheet['A1'])
-print(sheet['A1'].value)
-c = sheet['B1']
-print(c.value)
-
-print('Row {}, Column {} is {}.'.format(str(c.row), c.column, c.value))
-print('Cell {} is {}.'.format(c.coordinate, c.value))
-
-print(sheet.cell(row=1, column=2))
-print(sheet.cell(row=1, column=2).value)
-
-for i in range(1, 8):
-    print(i, sheet.cell(row=i, column=2).value)
+with urlopen('https://api.openweathermap.org/data/2.5/onecall?lat=36.85&lon=-76.35&exclude=hourly,minutely&units=imperial&appid=f473a02c2be1f952c67244c76c093f9e') as url:
+    http_info = url.info()
+    raw_data = url.read().decode(http_info.get_content_charset())
+project_info = json.loads(raw_data)
+result = {'headers': http_info.items(), 'body': project_info}

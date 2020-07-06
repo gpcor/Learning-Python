@@ -3,13 +3,16 @@
 ## Objectives:
 I will be uploading my code here as I create small projects and learn things of significance. My primary objective is to learn foundational concepts of Python via the following resources:
 1. [X] Automate The Boring Stuff (free online text)
-2. [ ] Python and Django Full Stack Web Developer Bootcamp (Udemy Course)
+2. [ ] Build a few small solo projects that implement features I'm unfamiliar with.
 3. [ ] Talk Python's #100DaysOfCode lessons *Note: I initially started with this but the lessons were a tad too advanced at the time, so I've dialed it back and will perform their challenges as I gain more confidence*
 4. [ ] Pybites and HackerRank, because they have great little code challenges that force me to learn new things to solve problems.
 
 At some point I want to be able to come back to this code and refactor, altering it so it becomes more efficient and uses better Pythonic code.
 
 ### Programming Daily Log:
+
+* July 5th, 2020: I'm still programming quite a bit, have been over the past month, while I balance the end of my college class. That said, from a less technical standpoint, I've been having issues getting my programming down. I've been trying to start a new project and keep running into road blocks where I can't seem to figure out how to accomplish certain parts of my code either due to a lack of experience with the library (most of which is python standard library) or with python or with how to write proper clean code. I know I've only been programming for a few months and rome wasn't built in a day, but I want to be good at this and become a successful developer so I get frustrated when I can't make something in my head execute properly in my code. It'll probably just take more time. Like this entire project, it will just take further commitment from me to improve this infant skills into a serious arsenal of experience. I'm considering the intro to CS course from MIT with Python. That could help.
+Also, Vim is a pain in the ass. That's on the list of things to learn.
 
 * June 3rd, 2020: It has been a minute since I've done some programming. I took a little break as my college class (the last one I need for my Associates Degree) began and I wanted to ensure I got the swing of things before I started programming again. Python programming unfortunately has to take a back burner to school and work to ensure I am meeting my responsibilities head on. I still may be a bit intermittent as I continue to get things done. That said, I'm taking a break from the ATBS udemy course indefinitely. I want to focus on something a little different for a while, and that is web development with Python and Django. I have a udemy course for this as well, which will allow me to refresh my HTML and CSS knowledge, learn some Javascript, and get started building sites and web applications with Django. Off we go!
 
